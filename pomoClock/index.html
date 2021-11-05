@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>PomoClock</title>
+</head>
+<body>
+  <h1>Pomodoro Clock</h1>
+  <main>
+    <div class="tabs">
+        <input type="radio" id="tab-work" name="tabs" checked="checked">
+        <label for="tab-work">Work</label>
+        <div class="tab-content">
+          <div class="pomodoro-timer">
+            <div class="time">
+              <div class="minutes">25</div>
+              <span>:</span>
+              <div class="seconds">00</div>
+            </div>
+            
+          
+          <div class="buttons">
+            <button class="btn-start">Start</button>
+            <button class="btn-pause hidden">Pause</button>
+            <button class="btn-reset">Reset</button>
+          </div>
+      
+        </div>
+      </div>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>Work done! Time for a Break!</h1>
+      </div>
+      <div class="overlay hidden"></div>
+
+      <div class="modal-break hidden">
+        <button class="close-modal-break">&times;</button>
+        <h1>Break done! GO TO WOOOORK!!</h1>
+      </div>
+      <div class="overlay-break hidden"></div>
+
+
+          <input type="radio" id="tab-break" name="tabs">
+          <label for="tab-break">Break</label>
+          <div class="tab-content">
+              <div class="pomodoro-timer">
+                <div class="time">
+                  <div class="minBreak">05</div>
+                  <span>:</span>
+                  <div class="secsBreak">00</div>
+                </div>
+                
+              
+              <div class="buttons">
+                <button class="btn-start-break">Start</button>
+                <button class="btn-pause-break hidden">Pause</button>
+                <button class="btn-reset-break">Reset</button>
+              </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

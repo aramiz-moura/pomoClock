@@ -1,0 +1,170 @@
+body {
+  background-color: #0f044c;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  font-size: 3rem;
+  color: white;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  padding: 25px;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs label {
+  padding: 25px;
+  background-color: white;
+  font-weight: bold;
+}
+
+.tabs .tab-content {
+  width: 100%;
+  padding: 20px;
+  order: 1;
+  display: none;
+}
+
+.tabs input[type="radio"]:checked + label + .tab-content {
+  display: block;
+}
+
+.tabs input[type="radio"]:checked + label {
+  background-color: #cccc;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #cccc;
+  width: 600px;
+}
+
+label {
+  cursor: pointer;
+}
+
+
+.time {
+  display: flex;
+  justify-content: center;
+}
+
+.minutes,
+.seconds,
+.minBreak,
+.secsBreak,
+span {
+  color: #eeeeee;
+  font-size: 8rem;
+  display: inline-block;
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.btn-start,
+.btn-reset,
+.btn-pause,
+.btn-start-break,
+.btn-pause-break,
+.btn-reset-break {
+  background-color: #787a91;
+  color: white;
+  height: 4.5rem;
+  width: 10rem;
+  border-radius: 10%;
+  border: 0;
+  box-shadow: 0 6px 0 white, 0 4px 14px -4px #000;
+  transition: box-shadow 0.2s ease-in-out, margin-top 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+.btn-start:hover, 
+.btn-pause:hover,
+.btn-reset:hover,
+.btn-start-break:hover,
+.btn-pause-break:hover,
+.btn-reset-break:hover {
+  opacity: 0.9;
+  outline: 0;
+  border-bottom-width: 3px;
+  cursor: pointer;
+}
+.btn-start:active,
+.btn-pause:active,
+.btn-reset:active,
+.btn-start-break:active,
+.btn-pause-break:active,
+.btn-reset-break:active {
+  box-shadow: none;
+  margin-top: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+.close-modal,
+.close-modal-break {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal,
+.modal-break {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay,
+.overlay-break {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
